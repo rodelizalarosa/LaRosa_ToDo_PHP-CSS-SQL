@@ -1,0 +1,15 @@
+{
+    "name": "rodeliza/dbmodel",
+    "autoload": {
+        "psr-4": {
+            "Rodeliza\\Dbmodel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rodeliza La Rosa",
+            "email": "rodeliza.2002@gmail.com"
+        }
+    ],
+    "require": {}
+}
