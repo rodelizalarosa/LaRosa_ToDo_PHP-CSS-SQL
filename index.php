@@ -47,6 +47,7 @@ $todo = new Task();
 </head>
 
 <body>
+    
     <div class="container">
         <h1>To-do List</h1>
         <form action="index.php" method="POST">
@@ -55,8 +56,10 @@ $todo = new Task();
         </form>
         <ul>
             <?php foreach ($result as $row): ?>
-                <li class="<?php echo $row["status"]; ?>">
-                    <strong><?php echo $row["task"]; ?></strong>
+                <li>
+                    <span class="<?php echo ($row["status"] == "completed" ? "task-text completed" : "task-text"); ?>">
+                        <strong><?php echo $row["task"]; ?></strong>
+                    </span>
                     <div class="actions">
                         <a href="index.php?complete=<?php echo $row['id']; ?>">Complete</a>
                         <a href="index.php?delete=<?php echo $row['id']; ?>" class="delete-link">Delete</a>
